@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<!-- struts为配置文件根元素 -->
+<struts>
+	<constant name="struts.custom.i18n.resources" value="messageResource"> </constant>
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.devMode" value="true" />
+	<!-- Action必须放在指定的包名空间中 -->
+	<package name="struts2" extends="struts-default">
+
+		<action name="Login" class="com.test.action.LoginAction">
+			<!-- 定义处理结果与视图资源之间的关系 -->
+			<result name="input">/login.jsp</result>
+			<result name="success">/admin/main.jsp</result>
+			<result name="error">/admin/login.jsp</result>
+
+		</action>
+		<action name="showCity" class="com.test.action.CityAction"
+			method="list">
+			<result name="success">/Test.jsp</result>
+		</action>
+		<!-- loadStation -->
+		<action name="loadStation" class="com.test.action.loadStationByAreaAction"
+			method="loadStationByArea">
+			<result name="success">/showstation.jsp</result>
+		</action>
+		<!-- loadAqi -->
+		<action name="loadAqi" class="com.test.action.loadAqiByStationAction"
+			method="loadAqiByStation">
+			<result name="success">/city/showaqi.jsp</result>
+		</action>
+	</package>
+	<!-- 城市管理模块 -->
+	<package name="area" extends="struts-default" namespace="/area">
+		<action name="list" class="com.test.action.CityAction" method="list">
+			<result name="success">/content/arealist.jsp</result>
+		</action>
+		<action name="add" class="com.test.action.CityAction" method="add">
+			<result name="success" type="redirectAction">list</result>
+
+
+		</action>
+
+		<action name="addInput" class="com.test.action.CityAction"
+			method="addInput">
+			<result name="input">/content/addcity.jsp</result>
+		</action>
+		<action name="update" class="com.test.action.CityAction"
+			method="update">
+			<result name="success" type="redirectAction">list</result>
+		</action>
+		<action name="updateInput" class="com.test.action.CityAction"
+			method="updateInput">
+			<result name="success">/content/cityupdateInput.jsp</result>
+		</action>
+		<action name="delete" class="com.test.action.CityAction"
+			method="delete">
+			<result name="success" type="redirectAction">list</result>
+		</action>
+
+	</package>
+	<!-- 监测站点管理模块 -->
+	<package name="station" extends="struts-default" namespace="/station">
+		<action name="add" class="com.test.action.StationAction"
+			method="add">
+			<result name="success" type="redirectAction">list</result>
+		</action>
+
+		<action name="update" class="com.test.action.StationAction"
+			method="update">
+			<result name="success" type="redirectAction">list</result>
+		</action>
+		<action name="list" class="com.test.action.StationAction"
+			method="list">
+			<result name="success">/content/stationlist.jsp</result>
+		</action>
+		<action name="addInput" class="com.test.action.StationAction"
+			method="addInput">
+			<result name="input">/content/addstation.jsp</result>
+		</action>
+		<action name="updateInput" class="com.test.action.StationAction"
+			method="updateInput">
+			<result name="input">/content/stationupdate.jsp</result>
+		</action>
+		<action name="delete" class="com.test.action.StationAction"
+			method="delete">
+			<result name="success" type="redirectAction">list</result>
+		</action>
+		<action name="stationPageAction" class="com.test.action.StationPageAction" method="execute">
+		<result name="success">/content/stationlist.jsp</result>
+		</action>
+	</package>
+	<!-- AQI管理模块 -->
+	<package name="aqi" extends="struts-default" namespace="/aqi">
+		<action name="add" class="com.test.action.AqiAction" method="add">
+			<result name="success" type="redirectAction">list</result>
+		</action>
+		<action name="addInput" class="com.test.action.AqiAction"
+			method="addInput">
+			<result name="input">/content/addaqi.jsp</result>
+		</action>
+		<action name="update" class="com.test.action.AqiAction" method="update">
+			<result name="success" type="redirectAction">list</result>
+		</action>
+		<action name="updateInput" class="com.test.action.AqiAction"
+			method="updateInput">
+			<result name="input">/content/updateaqi.jsp</result>
+		</action>
+		<action name="list" class="com.test.action.AqiAction" method="list">
+			<result name="success">/content/aqilist.jsp</result>
+		</action>
+		<action name="delete" class="com.test.action.AqiAction" method="delete">
+			<result name="success" type="redirectAction">list</result>
+		</action>
+		
+		<!-- AQI分页 -->
+		<action name="AqiPageAction" class="com.test.action.AqiPageAction" method="execute">
+		<result name="success">/content/aqilist.jsp</result>
+		</action>
+
+	</package>
+	<!-- 用户管理模块配置 -->
+	<package name="user" extends="struts-default" namespace="/user">
+		<action name="add" class="com.test.action.UserAction" method="add">
+			<result name="success" type="redirectAction">list</result>
+		</action>
+		<action name="delete" class="com.test.action.UserAction"
+			method="delete">
+			<result name="success" type="redirectAction">list</result>
+		</action>
+		<action name="list" class="com.test.action.UserAction" method="list">
+			<result name="success">/content/userlist.jsp</result>
+		</action>
+		<action name="update" class="com.test.action.UserAction"
+			method="update">
+			<result name="success" type="redirectAction">list</result>
+		</action>
+		<action name="updateInput" class="com.test.action.UserAction"
+			method="updateInput">
+			<result name="success">/content/updateuser.jsp</result>
+		</action>
+		<action name="addInput" class="com.test.action.UserAction" method="addInput">
+			<result name="success">/content/adduser.jsp</result>
+		</action>
+
+	</package>
+</struts>

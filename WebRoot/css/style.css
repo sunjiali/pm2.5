@@ -1,0 +1,47 @@
+/* CSS Document by shadowmedia.com.cn */
+
+
+/*---------------------------------------------------------common--------------------------------------------------------*/
+
+/*-----common-----*/
+
+body {margin:20;background-color:#ffffff;}
+
+a:link{text-decoration:none;color:#666666;} 
+a:visited{text-decoration:none;color:#666666;} 
+a:hover{text-decoration:none;color:#428EFF;}
+a:active{text-decoration:none;color:#428EFF;}
+
+td{font-size:12px;color:#666666;font-family:Verdana,宋体;}
+
+/*-----button-----*/
+
+.over, .button{background:url(../images/bg_x.gif) no-repeat;}
+.over{width:82px; height:23px; background-position:0px -25px;border:0;color:#333333;padding-left:10px;padding-top:2px;}
+.button{width:82px; height:23px; background-position:0px 0px;border:0;color:#333333;padding-left:10px;padding-top:2px;}
+
+/*---------------------------------------------------------content--------------------------------------------------------*/
+
+/*-----text-----*/
+
+.text8 {font-size:14px;}
+
+.text9 {font-size:14px;color:#ff6600;font-weight:bold;}
+
+/*-----input-----*/
+
+.input1 {width:120px;font-size:12px;font-family:Verdana,宋体;height:20px;}
+
+.input2 {width:300px;font-size:12px;font-family:Verdana,宋体;height:20px;}
+
+.input3 {width:150px;font-size:12px;font-family:Verdana,宋体;height:20px;}
+
+.input4 {width:600px;font-size:12px;font-family:Verdana,宋体;height:100px;}
+
+.input5 {width:210px;font-size:12px;font-family:Verdana,宋体;height:20px;border: 1px solid #999999;}
+
+/*-----bg-----*/
+
+.bg1 {background-color:#fdfeec;}
+
+.bg2 {background-color:#ecf6fe;}

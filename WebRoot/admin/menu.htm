@@ -1,0 +1,273 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<LINK href="css/style.css" type="text/css" rel="stylesheet">
+
+
+<style type="text/css">
+body {
+	background-color: #799ae1;
+	margin: 0;
+}
+
+table {
+	border: 0px;
+}
+
+img {
+	vertical-align: bottom;
+	border: 0px;
+}
+
+.sec_menu {
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+	overflow: hidden;
+	background: #D6DFF7;
+}
+
+.menu_title {
+	cursor: default;
+}
+
+.menu_title span {
+	position: relative;
+	color: #215DC6;
+	font-weight: bold;
+}
+
+.txt {
+	padding: 0 0 6 16;
+	height: 22px;
+	background-image: url(images/manage/bullet.gif);
+}
+</style>
+
+
+<SCRIPT language="javascript1.2">
+	
+		function showsubmenu(sid)
+		{
+			whichEl = eval("submenu" + sid);
+			if (whichEl.style.display == "none")
+			{
+				eval("submenu" + sid + ".style.display=\"\";");
+			}
+			else
+			{
+				eval("submenu" + sid + ".style.display=\"none\";");
+			}
+		}
+			
+</SCRIPT>
+
+</head>
+<BODY>
+	<table cellSpacing="0" cellPadding="0" width="100%" align="left"
+		border="0">
+		<tr>
+			<td vAlign="top">
+				<table cellSpacing="0" cellPadding="0" width="158" align="center">
+					<tr>
+						<td vAlign="bottom" height="42"><IMG height="38"
+							src="images/title.gif" width="158"></td>
+					</tr>
+				</table>
+				<table cellSpacing="0" cellPadding="0" width="158" align="center">
+					<tr>
+						<td class="menu_title"
+							background="images/manage/title_bg_quit.gif" height="25"
+							align="center"><A href="../showCity.action" target="_blank"> <b>网站首页</b></A>
+							| <A href="logout.jsp" target="_top"><b>退出后台</b></A></td>
+					</tr>
+				</table>
+
+
+
+				<TABLE id="table51" cellSpacing="0" cellPadding="0" width="158"
+					align="center">
+					<TR>
+						<TD height="20"></TD>
+					</TR>
+				</TABLE>
+
+
+				<TABLE id="table53" cellSpacing="0" cellPadding="0" width="158"
+					align="center">
+					<TR>
+						<TD class="menu_title" onClick="showsubmenu(1)"
+							background="images/manage/admin_left_8.gif" height="25"
+							align="center"><b>城市管理</b></TD>
+
+					</TR>
+				</TABLE>
+
+				<TABLE id="table54" cellSpacing="0" cellPadding="0" width="158"
+					align="center">
+					<TR>
+						<TD id="submenu1">
+
+							<DIV class="sec_menu" style="WIDTH: 158px">
+								<TABLE id="table55" cellSpacing="0" cellPadding="0" width="150"
+									align="center">
+									<TR>
+										<TD height="5"></TD>
+									</TR>
+
+									<TR>
+										<TD height="20" class="txt"><a
+											href="../area/list.action" target="main">城市列表</a></TD>
+									</TR>
+
+									<TR>
+										<TD height="20" class="txt"><a
+											href="../area/addInput.action" target="main">添加城市</a></TD>
+									</TR>
+								</TABLE>
+							</DIV>
+						</TD>
+					</TR>
+				</TABLE>
+
+				<TABLE id="table56" cellSpacing="0" cellPadding="0" width="158"
+					align="center">
+					<TR>
+						<TD height="20"></TD>
+					</TR>
+				</TABLE>
+
+
+
+				<TABLE id="table92" cellSpacing="0" cellPadding="0" width="158"
+					align="center">
+					<TR>
+						<TD class="menu_title" onClick="showsubmenu(8)"
+							background="images/manage/admin_left_8.gif" height="25"
+							align="center"><b>监测站点管理</b></TD>
+
+					</TR>
+				</TABLE>
+
+				<TABLE id="table93" cellSpacing="0" cellPadding="0" width="158"
+					align="center">
+					<TR>
+						<TD id="submenu8">
+
+							<DIV class="sec_menu" style="WIDTH: 158px">
+								<TABLE id="table94" cellSpacing="0" cellPadding="0" width="150"
+									align="center">
+									<TR>
+										<TD height="5"></TD>
+									</TR>
+									<tr>
+										<TD height="20" class="txt"><a href="../station/stationPageAction.action"
+											target="main">监测站点列表</a></TD>
+									</tr>
+									<tr>
+										<TD class="txt"><a href="../content/addstation.jsp" target="main">添加监测站点</a></TD>
+									</tr>
+								</TABLE>
+							</DIV>
+						</TD>
+					</TR>
+				</TABLE>
+
+				<TABLE id="table95" cellSpacing="0" cellPadding="0" width="158"
+					align="center">
+					<TR>
+						<TD height="20"></TD>
+					</TR>
+				</TABLE>
+
+
+
+				<TABLE id="table96" cellSpacing="0" cellPadding="0" width="158"
+					align="center">
+					<TR>
+
+						<TD class="menu_title" onClick="showsubmenu(9)"
+							background="images/manage/admin_left_8.gif" height="25"
+							align="center"><b>用户管理</b></TD>
+					</TR>
+					<TR>
+						<TD id="submenu9">
+
+							<DIV class="sec_menu" style="WIDTH: 158px">
+
+								<TABLE id="table97" cellSpacing="0" cellPadding="0" width="150"
+									align="center">
+									<TR>
+										<TD height="5"></TD>
+									</TR>
+									<tr>
+										<td class="txt"><a href="../user/list.action" target="main">管理员列表</a></td>
+									</tr>
+									<tr>
+										<td class="txt"><a href="../user/addInput.action" target="main">添加管理员</a></td>
+									</tr>
+									<tr>
+									</tr>
+								</TABLE>
+							</DIV>
+
+						</TD>
+					</TR>
+				</TABLE>
+
+				<TABLE id="table98" cellSpacing="0" cellPadding="0" width="158"
+					align="center">
+					<TR>
+						<TD height="20"></TD>
+					</TR>
+				</TABLE>
+
+
+
+				<TABLE id="table99" cellSpacing="0" cellPadding="0" width="158"
+					align="center">
+					<TR>
+
+						<TD class="menu_title" onClick="showsubmenu(10)"
+							background="images/manage/admin_left_8.gif" height="25"
+							align="center"><b>AQI管理</b></TD>
+					</TR>
+					<TR>
+							<TD id="submenu10">
+							
+								<DIV class="sec_menu" style="WIDTH: 158px">
+									
+              <TABLE id="table100" cellSpacing="0" cellPadding="0" width="150" align="center">
+                <TR> 
+                  <TD height="5"></TD>
+                </TR>
+				<tr>
+                    <td  class="txt"><a href="../aqi/AqiPageAction.action" target="main">
+					AQI列表</a></td>
+                </tr>
+				<tr>
+                    <td  class="txt"><a href="../aqi/addInput.action" target="main">
+					添加AQI</a></td>
+                </tr>
+              </TABLE>
+								</DIV>
+								
+							</TD>
+						</TR>
+				</TABLE>
+
+				<TABLE id="table101" cellSpacing="0" cellPadding="0" width="158"
+					align="center">
+					<TR>
+					
+						<TD height="20"></TD>
+					</TR>
+				</TABLE>
+
+
+			</td>
+		</tr>
+	</table>
+</BODY>
+</html>
